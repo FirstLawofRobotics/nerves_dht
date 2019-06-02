@@ -7,6 +7,9 @@
 #elif defined(rpi2) || defined(rpi3)
 #  include "rpi2/pi_2_dht_read.h"
 #  define PHT_READ pi_2_dht_read
+#elif defined(rpi0)
+#  include "rpi0/pi_0_dht_read.h"
+#  define PHT_READ pi_0_dht_read
 #endif
 
 static int parse_argv(int argc, char **argv, int *sensor, int *pin) {
